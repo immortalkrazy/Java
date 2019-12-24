@@ -1,14 +1,14 @@
 /**
  * This class implements a DoublyLinkedList. This is done using the classes
  * LinkedList and Link.
- * 
+ *
  * A linked list is simplar to an array, it holds values. However,
  * links in a linked list do not have indees. With a linked list
  * you do not need to predetermine it's size as it grows and shrinks
  * as it is edited. This is an example of a double ended, doubly
  * linked list. Each link references the next link and the previous
  * one.
- * 
+ *
  * @author Unknown
  *
  */
@@ -26,10 +26,10 @@ class DoublyLinkedList{
 		head = null;
 		tail = null;
 	}
-	
+
 		/**
  	* Constructs a list containing the elements of the array
-	 * @param  array the array whose elements are to be placed into this list
+	* @param  array the array whose elements are to be placed into this list
  	* @throws NullPointerException if the specified collection is null
  	*/
 	public DoublyLinkedList(int[] array){
@@ -41,7 +41,7 @@ class DoublyLinkedList{
 
 	/**
 	 * Insert an element at the head
-	 * 
+	 *
 	 * @param x Element to be inserted
 	 */
 	public void insertHead(int x){
@@ -56,7 +56,7 @@ class DoublyLinkedList{
 
 	/**
 	 * Insert an element at the tail
-	 * 
+	 *
 	 * @param x Element to be inserted
 	 */
 	public void insertTail(int x){
@@ -69,7 +69,7 @@ class DoublyLinkedList{
 
 	/**
 	 * Delete the element at the head
-	 * 
+	 *
 	 * @return The new head
 	 */
 	public void deleteHead(){
@@ -82,19 +82,19 @@ class DoublyLinkedList{
 
 	/**
 	 * Delete the element at the tail
-	 * 
+	 *
 	 * @return The new tail
 	 */
 	public void deleteTail(){
 		Link temp = tail;
 		tail = tail.previous; // 2ndLast(tail) <--> oldTail --> null
  		tail.next = null; // 2ndLast(tail) --> null
-		
+
 	}
 
 	/**
 	 * Delete the element from somewhere in the list
-	 * 
+	 *
 	 * @param x element to be deleted
 	 * @return  Link deleted
 	 */
@@ -113,12 +113,12 @@ class DoublyLinkedList{
 		else{ //Before: 1 <--> 2(current) <--> 3
 			current.previous.next = current.next;  // 1 --> 3
 			current.next.previous = current.previous; // 1 <--> 3
-		}	
+		}
 	}
 
 	/**
 	 * Inserts element and reorders
-	 * 
+	 *
 	 * @param x Element to be added
 	 */
 	public void insertOrdered(int x){
@@ -143,7 +143,7 @@ class DoublyLinkedList{
 
 	/**
 	 * Returns true if list is empty
-	 * 
+	 *
 	 * @return true if list is empty
 	 */
 	public boolean isEmpty(){
@@ -166,7 +166,7 @@ class DoublyLinkedList{
 /**
  * This class is used to implement the nodes of the
  * linked list.
- * 
+ *
  * @author Unknown
  *
  */
@@ -180,7 +180,7 @@ class Link{
 
 	/**
 	 * Constructor
-	 * 
+	 *
 	 * @param value Value of node
 	 */
 	public Link(int value){
@@ -196,7 +196,7 @@ class Link{
 
 	/**
 	 * Main Method
-	 * 
+	 *
 	 * @param args Command line arguments
 	 */
 	public static void main(String args[]){
